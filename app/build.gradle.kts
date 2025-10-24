@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.codegodotandroid"
-        minSdk = 33
+        minSdk = 24 // Cambiado de 33 a 24 para soportar Android 7.0+
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
@@ -51,8 +51,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
 
-    implementation("androidx.compose.material:material-icons-extended:1.7.5")
-
     // ViewModel y Lifecycle
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
@@ -65,8 +63,8 @@ dependencies {
     // Accompanist Permissions para manejar permisos
     implementation("com.google.accompanist:accompanist-permissions:0.34.0")
 
-    // Material Icons Extended para iconos adicionales
-    implementation("androidx.compose.material:material-icons-extended:1.6.0")
+    // Material Icons Extended para iconos adicionales (CameraAlt, PhotoLibrary, etc)
+    implementation("androidx.compose.material:material-icons-extended:1.7.5")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
